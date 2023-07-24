@@ -28,13 +28,13 @@ const Navbar = function () {
 
             <nav className="navbar">
                 <div className="bar contenedor">
-                    <a href="">
+                    <Link to="/">
                         <img
                             src={colorLogo}
                             alt="UPSS Wirelles logo"
                             className="logo"
                         />
-                    </a>
+                    </Link>
                     <div className="links">
                         <ul>
                             <li>
