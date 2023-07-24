@@ -251,3 +251,99 @@ a {
 .btn-menu i {
     font-size: 3.2rem;
 }
+
+/* 
+|-----||-----||-----||-----||-----|
+            Formulario
+|-----||-----||-----||-----||-----|
+*/
+.formulario__contenido {
+    background-color: var(--clr-secundario);
+    color: var(--clr-light);
+
+    border-radius: 10px;
+
+    padding: 5.6rem 5.6rem;
+}
+
+.formulario__contenido h3 {
+    font-size: 4.8rem;
+    font-weight: var(--fw-medium);
+    text-align: center;
+    text-transform: uppercase;
+
+    margin: 0 auto;
+    margin-bottom: 6.6rem;
+}
+
+.formulario {
+    max-width: 50.2rem;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.formulario__control {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.formulario__control label {
+    font-size: 2rem;
+    font-weight: var(--fw-medium);
+    text-transform: uppercase;
+}
+
+.formulario__control input[type="email"],
+.formulario__control textarea,
+.formulario__control input,
+.formulario__control select {
+    font-size: 1.8rem;
+    font-family: "Rubik", sans-serif;
+    color: var(--clr-dark);
+
+    height: 5.4rem;
+
+    padding: 1.2rem 2.4rem;
+
+    border: none;
+    outline: none;
+    border-radius: 10px;
+
+    resize: none;
+}
+
+.formulario__control textarea {
+    height: 10rem;
+}
+
+.formulario__control p {
+    font-size: 2rem;
+}
+
+.formulario input[type="submit"] {
+    width: 23.4rem;
+    align-self: flex-end;
+}
+
+.seccion-crear {
+    margin-top: 6.8rem;
+}
+
+.seccion-crear .formulario {
+    max-width: 80%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.formulario__control input[type="file"] {
+    color: var(--clr-light);
+}
+
+.form__detalles button[name="solicitar"] {
+    margin-top: 2.8rem;
+}

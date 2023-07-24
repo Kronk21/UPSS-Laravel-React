@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 
 import Navbar from "../components/UI/Navbar";
+import Form from "../components/UI/Form";
 
 const DefaultLayout = function () {
     return (
@@ -8,6 +9,8 @@ const DefaultLayout = function () {
             <Navbar />
 
             <Outlet />
+
+            <Form />
         </>
     );
 };
