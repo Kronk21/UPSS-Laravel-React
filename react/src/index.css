@@ -407,3 +407,63 @@ footer {
 .footer__mapa {
     width: 100%;
 }
+
+/* 
+|-----||-----||-----||-----||-----|
+            Productos
+|-----||-----||-----||-----||-----|
+*/
+main {
+    margin: 6.8rem 0;
+    margin-bottom: 13.6rem;
+}
+
+main .contenedor {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 3.6rem;
+
+    text-align: center;
+}
+
+.categorias__titulo {
+    font-size: 2.4rem;
+    font-weight: var(--fw-bold);
+    color: var(--clr-light);
+
+    background-color: var(--clr-dark);
+
+    padding: 1.6rem;
+}
+
+.categorias ul {
+    border: 1px solid var(--clr-dark);
+    border-bottom: none;
+}
+
+.categorias a {
+    font-size: 1.8rem;
+
+    border-bottom: 1px solid var(--clr-dark);
+    padding: 1.4rem;
+
+    display: block;
+
+    transition: all 0.2s ease-in;
+}
+
+.categorias a:hover {
+    color: var(--clr-light);
+    background-color: var(--clr-dark);
+}
+
+.focus {
+    color: var(--clr-light);
+    background-color: var(--clr-secundario);
+}
+
+.lista__productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3.6rem;
+}
