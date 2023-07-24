@@ -1,31 +1,13 @@
+import CategoriesMenu from "../components/Products/CategoriesMenu";
+import ProductsList from "../components/Products/ProductsList";
+
 const ProductsPage = function () {
     return (
         <main>
             <div className="contenedor">
-                <div className="categorias">
-                    <p className="categorias__titulo">Categorías</p>
-                    <ul>
-                        <li>
-                            <a href="" className="categoria__nombre ">
-                                Audifonos
-                            </a>
-                        </li>
-                        <li>
-                            <a href="" className="categoria__nombre ">
-                                Baterias
-                            </a>
-                        </li>
-                        <li>
-                            <a href="" className="categoria__nombre ">
-                                Memorias
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                <CategoriesMenu />
 
-                <div className="lista__productos">
-                    {/* Lista de productos */}
-                </div>
+                <ProductsList />
             </div>
         </main>
     );

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import categoryImg from "../../assets/img/collageusb.jpg";
 
 const CategoryCard = function () {
@@ -9,9 +11,9 @@ const CategoryCard = function () {
                     Guarda tus música, fotos, videos y archivos en una memoria
                     usb y/o micro sD al mejor precio.{" "}
                 </p>
-                <a href="" className="producto-sm__link">
+                <Link to="/products" className="producto-sm__link">
                     Ver más
-                </a>
+                </Link>
             </div>
             <div className="producto-sm__img">
                 <img src={categoryImg} alt="" />
