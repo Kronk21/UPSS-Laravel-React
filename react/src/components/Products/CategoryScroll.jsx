@@ -2,11 +2,11 @@ import ProductCard from "./ProductCard";
 
 const CategoryScroll = function () {
     return (
-        <div class="productos">
-            <h3 class="productos__titulo">Camaras de seguridad</h3>
+        <div className="productos">
+            <h3 className="productos__titulo">Camaras de seguridad</h3>
 
-            <div class="scroll">
-                <div class="productos__lista">
+            <div className="scroll">
+                <div className="productos__lista">
                     <ProductCard />
                     <ProductCard />
                     <ProductCard />
@@ -14,7 +14,7 @@ const CategoryScroll = function () {
                 </div>
             </div>
 
-            <a href="" class="productos__link btn btn-secundario">
+            <a href="" className="productos__link btn btn-secundario">
                 Ver más
             </a>
         </div>
