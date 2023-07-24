@@ -1,3 +1,4 @@
+import CategoryCard from "../components/Products/CategoryCard";
 import CategoryScroll from "../components/Products/CategoryScroll";
 
 const DefaultPage = function () {
@@ -7,7 +8,11 @@ const DefaultPage = function () {
                 <h2>Tenemos la última tecnología</h2>
 
                 <CategoryScroll />
-                <CategoryScroll />
+
+                <div class="productos-sm">
+                    <CategoryCard />
+                    <CategoryCard />
+                </div>
             </div>
         </section>
     );
