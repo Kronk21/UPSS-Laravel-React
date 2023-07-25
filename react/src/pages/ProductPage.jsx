@@ -1,5 +1,7 @@
+import ProductFull from "../components/Products/ProductFull";
+
 const ProductPage = function () {
-    return <h1>Products page: 1</h1>;
+    return <ProductFull />;
 };
 
 export default ProductPage;
