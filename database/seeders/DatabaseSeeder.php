@@ -15,8 +15,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $categories = Category::factory(7)->create();
+        foreach (Category::$categories as $category) {
+            Category::factory()->create([
+                "title" => $category,
+            ]);
+        }
 
+        $categories = Category::all();
         foreach ($categories as $category) {
             $number = random_int(5, 25);
 
