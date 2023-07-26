@@ -38,7 +38,7 @@ const Navbar = function () {
                     <div className="links">
                         <ul>
                             <li>
-                                <Link to="/products">Productos</Link>
+                                <Link to="/category">Categorias</Link>
                             </li>
                             <li>
                                 <a href="#contacto">Contacto</a>

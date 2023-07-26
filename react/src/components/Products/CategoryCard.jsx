@@ -11,7 +11,7 @@ const CategoryCard = function () {
                     Guarda tus música, fotos, videos y archivos en una memoria
                     usb y/o micro sD al mejor precio.{" "}
                 </p>
-                <Link to="/products" className="producto-sm__link">
+                <Link to="/category" className="producto-sm__link">
                     Ver más
                 </Link>
             </div>

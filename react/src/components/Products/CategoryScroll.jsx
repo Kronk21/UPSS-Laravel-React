@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import ProductCard from "./ProductCard";
 
 const CategoryScroll = function () {
@@ -14,9 +15,9 @@ const CategoryScroll = function () {
                 </div>
             </div>
 
-            <a href="" className="productos__link btn btn-secundario">
+            <Link to="/category" className="productos__link btn btn-secundario">
                 Ver más
-            </a>
+            </Link>
         </div>
     );
 };
