@@ -7,6 +7,7 @@ import ProductPage from "./pages/ProductPage";
 import CartPage from "./pages/CartPage";
 
 import { loader as productsLoader } from "./pages/ProductsPage";
+import { loader as productLoader } from "./pages/ProductPage";
 
 const router = createBrowserRouter([
     {
@@ -25,6 +26,7 @@ const router = createBrowserRouter([
             {
                 path: "/products/:id",
                 element: <ProductPage />,
+                loader: productLoader,
             },
             {
                 path: "/cart",
