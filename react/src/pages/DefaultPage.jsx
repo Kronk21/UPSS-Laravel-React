@@ -10,8 +10,8 @@ const DefaultPage = function () {
                 <CategoryScroll />
 
                 <div className="productos-sm">
-                    <CategoryCard />
-                    <CategoryCard />
+                    <CategoryCard categoryId={4} />
+                    <CategoryCard categoryId={5} />
                 </div>
             </div>
         </section>
