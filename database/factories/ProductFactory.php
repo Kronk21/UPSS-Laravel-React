@@ -21,6 +21,7 @@ class ProductFactory extends Factory
             "price" => fake()->numberBetween(200, 10_000),
             "description" => fake()->paragraph(),
             "stock" => fake()->numberBetween(1, 15),
+            "image_url" => fake()->imageUrl(),
         ];
     }
 }
