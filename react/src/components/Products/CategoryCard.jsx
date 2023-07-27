@@ -33,7 +33,7 @@ const CategoryCard = function ({ categoryId }) {
 
     return (
         <div className="producto-sm">
-            {isLoading && <h2>Loading...</h2>}
+            {isLoading && <h2>Cargando...</h2>}
             {!isLoading && (
                 <>
                     <div className="producto-sm__info">
