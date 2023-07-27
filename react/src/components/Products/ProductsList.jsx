@@ -1,15 +1,11 @@
 import ProductCard from "./ProductCard";
 
-const ProductsList = function () {
+const ProductsList = function ({ products }) {
     return (
         <div className="lista__productos">
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
+            {products.map((product) => (
+                <ProductCard key={product.id} product={product} />
+            ))}
         </div>
     );
 };

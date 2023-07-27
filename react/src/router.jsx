@@ -6,6 +6,8 @@ import ProductsPage from "./pages/ProductsPage";
 import ProductPage from "./pages/ProductPage";
 import CartPage from "./pages/CartPage";
 
+import { loader as productsLoader } from "./pages/ProductsPage";
+
 const router = createBrowserRouter([
     {
         path: "/",
@@ -18,6 +20,7 @@ const router = createBrowserRouter([
             {
                 path: "/category",
                 element: <ProductsPage />,
+                loader: productsLoader,
             },
             {
                 path: "/products/:id",
