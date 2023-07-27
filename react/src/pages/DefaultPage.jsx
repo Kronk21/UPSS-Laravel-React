@@ -7,7 +7,8 @@ const DefaultPage = function () {
             <div className="contenedor">
                 <h2>Tenemos la última tecnología</h2>
 
-                <CategoryScroll />
+                <CategoryScroll categoryId={1} />
+                <CategoryScroll categoryId={2} />
 
                 <div className="productos-sm">
                     <CategoryCard categoryId={4} />
