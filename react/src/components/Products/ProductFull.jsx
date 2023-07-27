@@ -8,20 +8,20 @@ const ProductFull = function ({ product }) {
                     <div className="articulo__imagenes">
                         <div className="imagenes__secundarias">
                             <div className="imagen__secundaria">
-                                <img src={productImage} />
+                                <img src={product.image_url} />
                             </div>
                             <div className="imagen__secundaria imagen__inactiva">
-                                <img src={productImage} />
+                                <img src={product.image_url} />
                             </div>
                             <div className="imagen__secundaria imagen__inactiva">
-                                <img src={productImage} />
+                                <img src={product.image_url} />
                             </div>
                             <div className="imagen__secundaria imagen__inactiva">
-                                <img src={productImage} />
+                                <img src={product.image_url} />
                             </div>
                         </div>
                         <div className="imagen__primaria">
-                            <img src={productImage} />
+                            <img src={product.image_url} />
                         </div>
                     </div>
                     <div className="articulo__info">

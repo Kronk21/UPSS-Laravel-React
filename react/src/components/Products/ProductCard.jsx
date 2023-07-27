@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 
-import img from "../../assets/img/61dBxsqt5pL._AC_SL1000_.jpg";
-
 const ProductCard = function ({ product }) {
     return (
         <Link to={`/products/${product.id}`} className="producto">
             <div className="producto__img">
-                <img src={img} alt={`Fotografia de ${product.title}`} />
+                <img
+                    src={product.image_url}
+                    alt={`Fotografia de ${product.title}`}
+                />
             </div>
             <div className="producto__info">
                 <p className="producto__nombre">{product.title}</p>
