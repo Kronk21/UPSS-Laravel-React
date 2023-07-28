@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Loader from "../UI/Loader";
 
 const CategoriesMenu = function ({ active }) {
     const [categories, setCategories] = useState([]);
@@ -25,7 +26,7 @@ const CategoriesMenu = function ({ active }) {
         <div className="categorias">
             <p className="categorias__titulo">Categorías</p>
 
-            {isLoading && <h2>Cargando...</h2>}
+            {isLoading && <Loader />}
 
             {!isLoading && categories && (
                 <ul>

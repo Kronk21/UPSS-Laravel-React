@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 
 import categoryImg from "../../assets/img/collageusb.jpg";
 import { useEffect, useState } from "react";
+import Loader from "../UI/Loader";
 
 const CategoryCard = function ({ categoryId }) {
     const [info, setInfo] = useState({
@@ -34,7 +35,7 @@ const CategoryCard = function ({ categoryId }) {
 
     return (
         <div className="producto-sm">
-            {isLoading && <h2>Cargando...</h2>}
+            {isLoading && <Loader />}
             {!isLoading && (
                 <>
                     <div className="producto-sm__info">

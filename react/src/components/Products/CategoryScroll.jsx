@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import ProductCard from "./ProductCard";
 import { useEffect, useState } from "react";
+import Loader from "../UI/Loader";
 
 const CategoryScroll = function ({ categoryId }) {
     const [info, setInfo] = useState({
@@ -39,7 +40,7 @@ const CategoryScroll = function ({ categoryId }) {
 
     return (
         <div className="productos">
-            {isLoading && <h2>Cargando...</h2>}
+            {isLoading && <Loader />}
 
             {!isLoading && info.products && (
                 <>
