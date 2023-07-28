@@ -35,6 +35,10 @@ const CartContextProvider = function ({ children }) {
         setCartProducts(updatedItems);
     };
 
+    const getNumberOfItemsInCart = function () {
+        return cartProducts.length;
+    };
+
     const contextValue = {
         items: cartProducts,
         productInCart: productInCart,
@@ -43,7 +47,7 @@ const CartContextProvider = function ({ children }) {
         updateItemQuantity: () => {},
         getItemTotalPrice: () => {},
         getTotalPrice: () => {},
-        getNumberOfItemsInCart: () => {},
+        getNumberOfItemsInCart: getNumberOfItemsInCart,
     };
 
     return (

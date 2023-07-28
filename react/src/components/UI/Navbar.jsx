@@ -1,9 +1,14 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 
 import whiteLogo from "../../assets/Logo-Blanco.png";
 import colorLogo from "../../assets/Logo-Color.png";
+import { CartContext } from "../../contexts/CartContext";
 
 const Navbar = function () {
+    const cartCtx = useContext(CartContext);
+    const numberOfItems = cartCtx.getNumberOfItemsInCart();
+
     return (
         <>
             <nav className="nav__info">
@@ -51,7 +56,7 @@ const Navbar = function () {
                             <Link to="/cart" className="carrito">
                                 <i className="fa-solid fa-cart-shopping"></i>
                                 <div className="numero-items">
-                                    <p>0</p>
+                                    <p>{numberOfItems}</p>
                                 </div>
                             </Link>
                         </div>
