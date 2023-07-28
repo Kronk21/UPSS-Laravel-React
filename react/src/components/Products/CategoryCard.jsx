@@ -8,6 +8,7 @@ const CategoryCard = function ({ categoryId }) {
         id: null,
         title: "",
         description: "",
+        image_url: "",
     });
     const [isLoading, setIsLoading] = useState(false);
 
@@ -47,7 +48,7 @@ const CategoryCard = function ({ categoryId }) {
                         </Link>
                     </div>
                     <div className="producto-sm__img">
-                        <img src={categoryImg} alt="" />
+                        <img src={info.image_url} alt="" />
                     </div>
                 </>
             )}
