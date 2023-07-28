@@ -16,8 +16,9 @@ const CartContextProvider = function ({ children }) {
         addItemToCart: () => {},
         removeItemFromCart: () => {},
         updateItemQuantity: () => {},
-        getItemTotal: () => {},
-        getTotal: () => {},
+        getItemTotalPrice: () => {},
+        getTotalPrice: () => {},
+        getNumberOfItemsInCart: () => {},
     };
 
     return (
