@@ -1,6 +1,26 @@
 import productImage from "../../assets/img/61dBxsqt5pL._AC_SL1000_.jpg";
 
+import { useContext, useEffect, useState } from "react";
+import { CartContext } from "../../contexts/CartContext";
+import { Link } from "react-router-dom";
+
 const ProductFull = function ({ product }) {
+    const cartCtx = useContext(CartContext);
+
+    const productIsInCart = cartCtx.productInCart(product.id);
+
+    const onAddHandler = function (e) {
+        e.preventDefault();
+
+        cartCtx.addItemToCart(product);
+    };
+
+    const onRemoveHandler = function (e) {
+        e.preventDefault();
+
+        cartCtx.removeItemFromCart(product.id);
+    };
+
     return (
         <section className="seccion-producto">
             <div className="contenedor">
@@ -39,10 +59,33 @@ const ProductFull = function ({ product }) {
                         </p> */}
 
                         <form className="info__acciones">
-                            {/* <input type="hidden" name="producto_id" value="" /> */}
-                            <button type="submit" className="btn btn-primario">
-                                Agregar al carrito
-                            </button>
+                            {productIsInCart ? (
+                                <>
+                                    <Link
+                                        to="/cart"
+                                        className="producto-sm__link"
+                                        style={{ marginRight: "20px" }}
+                                    >
+                                        Ver carrito
+                                    </Link>
+
+                                    <button
+                                        type="submit"
+                                        className="btn btn-primario"
+                                        onClick={onRemoveHandler}
+                                    >
+                                        Remover del carrito
+                                    </button>
+                                </>
+                            ) : (
+                                <button
+                                    type="submit"
+                                    className="btn btn-primario"
+                                    onClick={onAddHandler}
+                                >
+                                    Agregar al carrito
+                                </button>
+                            )}
                         </form>
                     </div>
                 </div>
