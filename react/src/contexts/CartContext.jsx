@@ -7,6 +7,7 @@ export const CartContext = createContext({
     updateItemQuantity: () => {},
     getItemTotalPrice: () => {},
     getTotalPrice: () => {},
+    getNumberOfItemsInCart: () => {},
 });
 
 const CartContextProvider = function ({ children }) {
