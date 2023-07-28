@@ -18,6 +18,7 @@ class CategoryResource extends JsonResource
             "id" => $this->id,
             "title" => $this->title,
             "description" => $this->description,
+            "image_url" => $this->image_url,
             "products" => $this->when(
                 request()->has("with_products"),
                 function () {
