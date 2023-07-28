@@ -1,9 +1,8 @@
 :root {
-    --clr-primario: #f59f00;
-    --clr-secundario: #e9536c;
-    --clr-acento: #74b816;
+    --clr-primario: #594036;
+    --clr-secundario: #222e50;
+    --clr-acento: #5b85aa;
     --clr-dark: #272929;
-    --clr-bold: #0f1111;
     --clr-light: #fff;
     --clr-gray: #888;
 
@@ -78,7 +77,7 @@ a {
 }
 
 .btn-secundario:hover {
-    background-color: var(--clr-dark);
+    background-color: var(--clr-primario);
 }
 
 .btn-terciario {
@@ -607,8 +606,8 @@ main .contenedor {
 }
 
 .producto-sm__link:hover {
-    color: var(--clr-dark);
-    border-bottom-color: var(--clr-dark);
+    color: var(--clr-primario);
+    border-bottom-color: var(--clr-primario);
 }
 
 .producto-sm__img img {
@@ -617,7 +616,7 @@ main .contenedor {
 
 .categorias a:hover {
     color: var(--clr-light);
-    background-color: var(--clr-dark);
+    background-color: var(--clr-primario);
 }
 
 .focus {
