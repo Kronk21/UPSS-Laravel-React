@@ -12,11 +12,23 @@ const CartPage = function () {
     return (
         <section className="seccion-carrito">
             <div className="contenedor">
-                <div className="carrito__contenido">
-                    <CartItemsList products={cartCtx.items} />
+                {cartCtx.items.length === 0 ? (
+                    <h2
+                        style={{
+                            fontSize: "4.8rem",
+                            fontWeight: "var(--fw-medium)",
+                            marginBottom: "12.4rem",
+                        }}
+                    >
+                        No hay nada en el carrito
+                    </h2>
+                ) : (
+                    <div className="carrito__contenido">
+                        <CartItemsList products={cartCtx.items} />
 
-                    <CartDetails value={totalPrice} />
-                </div>
+                        <CartDetails value={totalPrice} />
+                    </div>
+                )}
             </div>
         </section>
     );
