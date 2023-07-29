@@ -1,9 +1,11 @@
 import CartItem from "./CartItem";
 
-const CartItemsList = function () {
+const CartItemsList = function ({ products }) {
     return (
         <ul className="carrito__lista">
-            <CartItem />
+            {products.map((product) => (
+                <CartItem key={product.id} product={product} />
+            ))}
         </ul>
     );
 };

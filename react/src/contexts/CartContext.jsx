@@ -6,7 +6,6 @@ export const CartContext = createContext({
     addItemToCart: () => {},
     removeItemFromCart: () => {},
     updateItemQuantity: () => {},
-    getItemTotalPrice: () => {},
     getTotalPrice: () => {},
     getNumberOfItemsInCart: () => {},
 });
@@ -46,6 +45,16 @@ const CartContextProvider = function ({ children }) {
         setCartProducts(updatedItems);
     };
 
+    const updateItemQuantity = function (productId, quantity) {
+        const products = cartProducts.map((product) =>
+            product.id === productId
+                ? { ...product, quantity: quantity }
+                : product
+        );
+
+        setCartProducts(products);
+    };
+
     const getNumberOfItemsInCart = function () {
         return cartProducts.length;
     };
@@ -55,8 +64,7 @@ const CartContextProvider = function ({ children }) {
         productInCart: productInCart,
         addItemToCart: addItemToCart,
         removeItemFromCart: removeItemFromCart,
-        updateItemQuantity: () => {},
-        getItemTotalPrice: () => {},
+        updateItemQuantity: updateItemQuantity,
         getTotalPrice: () => {},
         getNumberOfItemsInCart: getNumberOfItemsInCart,
     };

@@ -1,51 +1,68 @@
+import { Link } from "react-router-dom";
+
+import { useContext } from "react";
+import { CartContext } from "../../contexts/CartContext";
+
 import itemImage from "../../assets/img/61dBxsqt5pL._AC_SL1000_.jpg";
 
-const CartItem = function () {
+const CartItem = function ({ product }) {
+    const cartCtx = useContext(CartContext);
+
+    const onChangeHandler = function (e) {
+        e.preventDefault();
+
+        const value = +e.target.value;
+        cartCtx.updateItemQuantity(product.id, value);
+    };
+
+    const onRemoveHander = function (e) {
+        e.preventDefault();
+        cartCtx.removeItemFromCart(product.id);
+    };
+
     return (
         <li className="carrito__producto">
             <div className="carrito__img">
-                <img src={itemImage} alt="" />
+                <img src={product.image_url} alt="" />
             </div>
+
             <div className="carrito__info">
-                <a href="producto.php?producto_id=" className="info__nombre">
-                    asdfasdf
-                </a>
+                <Link to={`/products/${product.id}`} className="info__nombre">
+                    {product.title}
+                </Link>
                 <p className="info__precio">
                     <span className="precio__individual">
-                        Precio por unidad: $asdfasdf
+                        Precio por unidad:{" "}
+                        {new Intl.NumberFormat("en-US", {
+                            style: "currency",
+                            currency: "USD",
+                        }).format(product.price)}
                     </span>
                 </p>
                 <p className="info__precio">
                     <span className="precio__conjunto">
                         Precio en conjunto:{" "}
                     </span>
-                    $500
+                    {new Intl.NumberFormat("en-US", {
+                        style: "currency",
+                        currency: "USD",
+                    }).format(product.price * product.quantity)}
                 </p>
-                <form
-                    method="POST"
-                    className="carrito__acciones"
-                    action="carrito.php"
-                >
+
+                <form className="carrito__acciones">
                     <p className="info__cantidad">Cantidad:</p>
-                    <input
-                        type="number"
-                        name="cantidad"
-                        value="0"
-                        min="1"
-                        max="5"
-                    />
-                    <input type="hidden" name="producto_id" value="" />
+                    <select onChange={onChangeHandler}>
+                        {[...Array(product.stock)].map((_, i) => (
+                            <option key={i} value={i + 1}>
+                                {i + 1}
+                            </option>
+                        ))}
+                    </select>
+
                     <button
                         type="submit"
-                        name="update"
-                        className="carrito__btn"
-                    >
-                        Actualizar
-                    </button>
-                    <button
-                        type="submit"
-                        name="delete"
                         className="carrito__eliminar"
+                        onClick={onRemoveHander}
                     >
                         <i className="fa-solid fa-trash-can"></i>
                     </button>
