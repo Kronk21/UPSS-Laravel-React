@@ -51,10 +51,10 @@ const CartItem = function ({ product }) {
 
                 <form className="carrito__acciones">
                     <p className="info__cantidad">Cantidad:</p>
-                    <select onChange={onChangeHandler}>
+                    <select value={product.quantity} onChange={onChangeHandler}>
                         {[...Array(product.stock)].map((_, i) =>
                             product.quantity === i + 1 ? (
-                                <option key={i} value={i + 1} selected>
+                                <option key={i} value={i + 1}>
                                     {i + 1}
                                 </option>
                             ) : (
