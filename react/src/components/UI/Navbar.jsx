@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 
 import whiteLogo from "../../assets/Logo-Blanco.png";
@@ -8,6 +8,10 @@ import { CartContext } from "../../contexts/CartContext";
 const Navbar = function () {
     const cartCtx = useContext(CartContext);
     const numberOfItems = cartCtx.getNumberOfItemsInCart();
+
+    const toogleMenu = function () {
+        document.querySelector(".links").classList.toggle("mostrar");
+    };
 
     return (
         <>
@@ -40,6 +44,7 @@ const Navbar = function () {
                             className="logo"
                         />
                     </Link>
+
                     <div className="links">
                         <ul>
                             <li>
@@ -49,6 +54,7 @@ const Navbar = function () {
                                 <a href="#contacto">Contacto</a>
                             </li>
                         </ul>
+
                         <div>
                             <a href="" className="btn btn-primario">
                                 Contrata ya
@@ -61,6 +67,10 @@ const Navbar = function () {
                             </Link>
                         </div>
                     </div>
+
+                    <button className="btn-menu" onClick={toogleMenu}>
+                        <i className="fa-solid fa-bars"></i>
+                    </button>
                 </div>
             </nav>
         </>
