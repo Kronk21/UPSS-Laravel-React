@@ -7,6 +7,7 @@ import CartItemsList from "../components/Cart/CartItemsList";
 
 const CartPage = function () {
     const cartCtx = useContext(CartContext);
+    const totalPrice = cartCtx.getTotalPrice();
 
     return (
         <section className="seccion-carrito">
@@ -14,7 +15,7 @@ const CartPage = function () {
                 <div className="carrito__contenido">
                     <CartItemsList products={cartCtx.items} />
 
-                    <CartDetails />
+                    <CartDetails value={totalPrice} />
                 </div>
             </div>
         </section>

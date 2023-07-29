@@ -55,6 +55,16 @@ const CartContextProvider = function ({ children }) {
         setCartProducts(products);
     };
 
+    const getTotalPrice = function () {
+        let totalPrice = 0;
+
+        cartProducts.forEach(
+            (product) => (totalPrice += product.price * product.quantity)
+        );
+
+        return totalPrice;
+    };
+
     const getNumberOfItemsInCart = function () {
         return cartProducts.length;
     };
@@ -65,7 +75,7 @@ const CartContextProvider = function ({ children }) {
         addItemToCart: addItemToCart,
         removeItemFromCart: removeItemFromCart,
         updateItemQuantity: updateItemQuantity,
-        getTotalPrice: () => {},
+        getTotalPrice: getTotalPrice,
         getNumberOfItemsInCart: getNumberOfItemsInCart,
     };
 
