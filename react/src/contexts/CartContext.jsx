@@ -52,6 +52,7 @@ const CartContextProvider = function ({ children }) {
                 : product
         );
 
+        storeCartProducts(products);
         setCartProducts(products);
     };
 
