@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Paginator = function ({ meta }) {
+const Paginator = function ({ meta, id }) {
     const decodeHtml = function (html) {
         var txt = document.createElement("textarea");
         txt.innerHTML = html;
@@ -10,7 +10,9 @@ const Paginator = function ({ meta }) {
 
     const transformLinks = function (links) {
         return links.map((link) => {
-            const url = link.url ? `?page=${link.url.split("=")[1]}` : null;
+            const url = link.url
+                ? `?id=${id}&page=${link.url.split("=")[1]}`
+                : null;
 
             return {
                 url: url,

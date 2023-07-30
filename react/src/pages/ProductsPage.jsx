@@ -14,7 +14,7 @@ const ProductsPage = function () {
 
                 <ProductsList products={products} />
 
-                <Paginator meta={meta} />
+                <Paginator meta={meta} id={activeCategory} />
             </div>
         </main>
     );
