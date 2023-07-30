@@ -7,7 +7,7 @@ const Footer = function () {
                 <div className="footer__col">
                     <img src={colorLogo} alt="UPSS Wireless logo" />
                     <p className="footer__aviso">
-                        Copyright © 2022 por UPSS Wireless, Todos los derechos
+                        Copyright © 2023 por UPSS Wireless, Todos los derechos
                         reservados.
                     </p>
                 </div>
@@ -22,12 +22,12 @@ const Footer = function () {
                         </li>
                         <li>
                             <i className="fa-solid fa-phone footer__icono"></i>
-                            <p className="footer__info">(+759) 759 723 0294</p>
+                            <p className="footer__info">(+52) 771 359 7174</p>
                         </li>
                         <li>
                             <i className="fa-solid fa-envelope footer__icono"></i>
                             <p className="footer__info">
-                                uppswireless@gmail.com
+                                CesarAxel001@gmail.com
                             </p>
                         </li>
                     </ul>

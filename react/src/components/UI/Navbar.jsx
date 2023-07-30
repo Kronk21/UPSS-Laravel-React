@@ -23,14 +23,25 @@ const Navbar = function () {
                         className="logo"
                     />
                     <div className="info__telefono">
-                        <h2>Llamanos</h2>
-                        <p>(+759) 759 723 0294</p>
+                        <h2>Llámanos</h2>
+                        <p>(+52) 771 359 7174</p>
                     </div>
                     <div className="info__redes">
                         <h2>Síguenos en:</h2>
-                        <a href="#">
-                            <ion-icon name="logo-facebook"></ion-icon>
-                        </a>
+                        <div>
+                            <a
+                                href="https://www.instagram.com/cesarserrano21/"
+                                target="_blank"
+                            >
+                                <ion-icon name="logo-instagram"></ion-icon>
+                            </a>
+                            <a
+                                href="https://github.com/Kronk21"
+                                target="_blank"
+                            >
+                                <ion-icon name="logo-github"></ion-icon>
+                            </a>
+                        </div>
                     </div>
                 </ul>
             </nav>
