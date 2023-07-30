@@ -26,7 +26,7 @@ class DatabaseSeeder extends Seeder
         // Create products
         $categories = Category::all();
         foreach ($categories as $category) {
-            $number = random_int(10, 30);
+            $number = random_int(25, 50);
 
             Product::factory($number)->create([
                 "category_id" => $category->id,
