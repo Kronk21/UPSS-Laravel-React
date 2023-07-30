@@ -23,7 +23,7 @@ const CartItem = function ({ product }) {
     return (
         <li className="carrito__producto">
             <div className="carrito__img">
-                <img src={product.image_url} alt="" />
+                <img src={product.images[0].image_url} alt="" />
             </div>
 
             <div className="carrito__info">

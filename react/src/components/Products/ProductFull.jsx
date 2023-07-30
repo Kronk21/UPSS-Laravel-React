@@ -3,6 +3,7 @@ import productImage from "../../assets/img/61dBxsqt5pL._AC_SL1000_.jpg";
 import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../../contexts/CartContext";
 import { Link } from "react-router-dom";
+import ProductImages from "./ProductImages";
 
 const ProductFull = function ({ product }) {
     const cartCtx = useContext(CartContext);
@@ -25,25 +26,8 @@ const ProductFull = function ({ product }) {
         <section className="seccion-producto">
             <div className="contenedor">
                 <div className="articulo">
-                    <div className="articulo__imagenes">
-                        <div className="imagenes__secundarias">
-                            <div className="imagen__secundaria">
-                                <img src={product.image_url} />
-                            </div>
-                            <div className="imagen__secundaria imagen__inactiva">
-                                <img src={product.image_url} />
-                            </div>
-                            <div className="imagen__secundaria imagen__inactiva">
-                                <img src={product.image_url} />
-                            </div>
-                            <div className="imagen__secundaria imagen__inactiva">
-                                <img src={product.image_url} />
-                            </div>
-                        </div>
-                        <div className="imagen__primaria">
-                            <img src={product.image_url} />
-                        </div>
-                    </div>
+                    <ProductImages images={product.images} />
+
                     <div className="articulo__info">
                         <p className="info__nombre">{product.title}</p>
                         <p className="info__precio">
