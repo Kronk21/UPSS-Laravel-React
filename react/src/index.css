@@ -667,6 +667,35 @@ main .contenedor {
 
 /* 
 |-----||-----||-----||-----||-----|
+            Paginador
+|-----||-----||-----||-----||-----|
+*/
+.pagination {
+    margin-top: 3.4rem;
+    display: inline-block;
+
+    grid-column: 2;
+}
+
+.pagination a {
+    color: var(--clr-dark);
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.pagination a.active {
+    background-color: var(--clr-acento);
+    color: var(--clr-light);
+    border-radius: 5px;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+/* 
+|-----||-----||-----||-----||-----|
             Producto
 |-----||-----||-----||-----||-----|
 */

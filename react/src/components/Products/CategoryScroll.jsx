@@ -31,7 +31,7 @@ const CategoryScroll = function ({ categoryId }) {
                 ...prev,
                 id: data.id,
                 title: data.title,
-                products: data.products.slice(0, 4),
+                products: data.products.data.slice(0, 4),
             };
         });
 
