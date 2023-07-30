@@ -22,7 +22,8 @@ class CategoryResource extends JsonResource
             "products" => $this->when(
                 request()->has("with_products"),
                 function () {
-                    return ProductResource::collection($this->products);
+                    // return ProductResource::collection($this->products);
+                    return ProductResource::collection($this->products()->paginate(5))->response()->getData(true);
                 }
             ),
             // "products" => ProductResource::collection($this->products()->get()),
