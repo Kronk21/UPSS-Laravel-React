@@ -89,11 +89,15 @@ git clone https://github.com/Kronk21/UPSS-Laravel-React.git
     ```
     composer install
     ```
-4. Run migrations
+4. Set the encryption key by executing
+    ```
+    php artisan key:generate --ansi
+    ```
+5. Run migrations
     ```
     php artisan migrate --seed
     ```
-5. Start local server by executing
+6. Start local server by executing
     ```
     php artisan serve
     ```
